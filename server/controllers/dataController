@@ -1,0 +1,31 @@
+// Sample data for demonstration purposes
+const sampleData = [
+    { id: 1, name: 'John' },
+    { id: 2, name: 'Alice' },
+    { id: 3, name: 'Bob' }
+  ];
+  
+  // Function to retrieve all data
+  async function getData() {
+    return sampleData;
+  }
+  
+  // Function to retrieve data by ID
+  async function getDataById(id) {
+    // Finding data by ID
+    const data = sampleData.find(item => item.id == id);
+    // If data found, return it
+    if (data) {
+      return data;
+    } else {
+      // If data not found, return 404 error
+      res.status(404).json({ message: 'Data not found' });
+    }
+  }
+  
+  // Exporting functions for use in other modules
+  module.exports = {
+    getData, // Function to retrieve all data
+    getDataById // Function to retrieve data by ID
+  };
+  

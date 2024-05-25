@@ -1,0 +1,7 @@
+{
+  "todos": [
+    { "id": 1, "task": "Learn React" },
+    { "id": 2, "task": "Learn Next.js" },
+    { "id": 3, "task": "Build a To-Do App" }
+  ]
+}
